@@ -1,0 +1,15 @@
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.csproj.AssemblyReference.cache
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.AssemblyInfoInputs.cache
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.AssemblyInfo.cs
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.csproj.CoreCompileInputs.cache
+C:\Users\Mahir\Pictures\c#\4.3p\bin\Debug\net6.0\4.3p.exe
+C:\Users\Mahir\Pictures\c#\4.3p\bin\Debug\net6.0\4.3p.deps.json
+C:\Users\Mahir\Pictures\c#\4.3p\bin\Debug\net6.0\4.3p.runtimeconfig.json
+C:\Users\Mahir\Pictures\c#\4.3p\bin\Debug\net6.0\4.3p.dll
+C:\Users\Mahir\Pictures\c#\4.3p\bin\Debug\net6.0\4.3p.pdb
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.dll
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\refint\4.3p.dll
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.pdb
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\4.3p.genruntimeconfig.cache
+C:\Users\Mahir\Pictures\c#\4.3p\obj\Debug\net6.0\ref\4.3p.dll

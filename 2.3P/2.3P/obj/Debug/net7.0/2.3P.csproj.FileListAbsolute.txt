@@ -1,0 +1,15 @@
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\bin\Debug\net7.0\2.3P.exe
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\bin\Debug\net7.0\2.3P.deps.json
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\bin\Debug\net7.0\2.3P.runtimeconfig.json
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\bin\Debug\net7.0\2.3P.dll
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\bin\Debug\net7.0\2.3P.pdb
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.csproj.AssemblyReference.cache
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.AssemblyInfoInputs.cache
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.AssemblyInfo.cs
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.csproj.CoreCompileInputs.cache
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.dll
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\refint\2.3P.dll
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.pdb
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\2.3P.genruntimeconfig.cache
+C:\Users\Mahir\Pictures\c#\2.3P\2.3P\obj\Debug\net7.0\ref\2.3P.dll

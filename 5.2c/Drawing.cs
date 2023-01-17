@@ -1,0 +1,190 @@
+﻿using SplashKitSDK;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+
+namespace project
+{
+    public class Drawing
+    {
+        private List<Shape> _shapes;
+        private Color _background;
+        StreamWriter writer;
+        StreamReader reader;
+
+        public Drawing() : this(Color.White)
+        {
+            // other steps could go here…
+        }
+        public Drawing(Color background)
+        {
+            _shapes = new List<Shape>();
+            _background = background;
+        }
+
+        public Color Background
+        {
+            get { return _background; }
+            set { _background = value; }
+        }
+        public int ShapeCount
+        {
+            get { return _shapes.Count; }
+        }
+        public void AddShape(Shape shape)
+        {
+          //  Console.WriteLine(shape);
+            _shapes.Add(shape);
+        }
+
+
+        public void Draw()
+        {
+            SplashKit.ClearScreen(_background);
+
+            foreach (Shape shape in _shapes)
+            {
+                shape.Draw();
+                 //Console.WriteLine(shape);
+            }
+
+        }
+
+        public void SelectedShapeAt(Point2D pt)
+        {
+            Console.WriteLine(pt.X+ " " + pt.Y);    
+            foreach (Shape s in _shapes)
+            {
+                if (s.IsAt(pt))
+                {
+                    s.Selected = true;                   
+                }
+                else
+                {
+                    s.Selected = false;
+                }
+
+                //if(s.IsAt(pt)){ if(!s.Selected) s.Selected = true; }
+            }
+        }
+
+        public List<Shape> SelectedShapes()
+        {
+            List<Shape> _selectedShapes = new List<Shape>();
+            foreach (Shape s in _shapes)
+            {
+
+                if (s.Selected)
+                {
+                    _selectedShapes.Add(s);
+                }
+            }
+            return _selectedShapes;
+        }
+        public void deleteAll()
+        {
+            List<Shape> selected_shapes_list = SelectedShapes();
+
+            for (int i = 0; i < selected_shapes_list.Count(); i++)
+            {
+                if (selected_shapes_list.Contains(selected_shapes_list[i]))
+                {
+                    _shapes.Remove(selected_shapes_list[i]);
+                }
+            }
+        }
+
+        public void RemoveShape()
+        {
+            //List<Shape> toRemove = new List<Shape>();
+            //foreach (Shape s in _shapes)
+            //{                
+            //    if (s.Selected)
+            //    {
+            //        toRemove.Add(s);
+            //    }
+            //}
+
+            //_shapes.RemoveAll(x => toRemove.Contains(x));
+
+            for (int i = 0; i < _shapes.Count(); i++)
+            {
+                if (_shapes[i].Selected)
+                {
+                    _shapes.Remove(_shapes[i]);//
+                    i--;//
+                    break;
+                }
+            }
+
+            //foreach(Shape S in _shapes.ToList())
+            //{
+            //    if (S.Selected)
+            //    {
+            //        _shapes.Remove(S);
+            //    }
+            //}
+
+
+        }
+
+
+        public void Save(string filename)
+        {
+            writer = new StreamWriter(filename);
+            writer.WriteColor(_background);
+            writer.WriteLine(ShapeCount);
+
+            foreach (Shape s in _shapes)
+            {
+                s.SaveTo(writer);
+            }
+            writer.Close();
+        }
+        public void Load(string filename)
+        {
+            reader = new StreamReader(filename);
+            try
+            {
+                Shape s;
+                string kind;
+                Background = reader.ReadColor();
+                int count = reader.ReadInteger();
+                _shapes.Clear();
+
+                for (int i = 0; i < count; i++)
+                {
+                    kind = reader.ReadLine();
+                    switch (kind)
+                    {
+                        case "Rectangle":
+                            s = new MyRectangle();
+                            break;
+                        case "Circle":
+                            s = new MyCircle();
+                            break;
+                        case "Line":
+                            s = new MyLine();
+                            break;
+                        default:
+                            throw new InvalidDataException("Error at shape: " + kind);
+                    }
+                    s.LoadFrom(reader);
+                    AddShape(s);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e.Message);
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+        
+        }
+
+
+    }
+}
